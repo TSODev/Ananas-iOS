@@ -71,11 +71,13 @@
       "size" : "40x40"
     },
     {
+      "filename" : "ananas.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
+      "filename" : "ananas@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
