@@ -27,11 +27,11 @@ class DataController: ObservableObject {
     
     @Published var appIsLoading = true
     @Published var loggedUser: User = User()
-    @Published  var peoples: [People] = []
-    @Published var anomalies: [Anomalie] = []
-    @Published var metadata: [Metadata] = []
-    @Published var datafiles: [Datafile] = []
-    @Published var searchPeople = ""
+    var peoples: [People] = []
+    var filteredPeople: [People] = []
+    var anomalies: [Anomalie] = []
+    var metadata: [Metadata] = []
+    var datafiles: [Datafile] = []
     
     @Published var logged = false
     var peopleLoaded = false
@@ -40,26 +40,6 @@ class DataController: ObservableObject {
     var metadataLoaded = false
     var datafilesLoaded = false
 
-    @Published var filteredPeople: [People] = []
-    var publisher: AnyCancellable?
-    
-    
-    init() {
-        self.publisher = $searchPeople
-            .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
-            .receive(on: RunLoop .main)
-            .sink(receiveValue: { (str) in
-//                debugPrint(str)
-                if !self.searchPeople.isEmpty {
-                    self.filteredPeople = self.peoples.filter { $0.fullname.contains(str) }
-                } else {
-                    self.filteredPeople = self.peoples
-                }
-//                self.filteredPeople.map {debugPrint ($0.fullname)}
-            })
-        
-        
-    }
     
     func isAppLoading() {
         self.appIsLoading = !(self.logged && self.peopleLoaded && self.anomalieLoaded)
@@ -134,7 +114,8 @@ class DataController: ObservableObject {
                 switch response.result {
                 case .success: do {
                 DispatchQueue.main.async {
-                    self.peoples = response.value!.people.filter({$0.source == 1})
+//                    self.peoples = response.value!.people.filter({$0.source == 1})
+                    self.peoples = response.value!.people
                     self.filteredPeople = response.value!.people
                     self.peopleLoaded = true
                     self.isAppLoading()
@@ -218,7 +199,13 @@ class DataController: ObservableObject {
             .response {  response in
                 DispatchQueue.main.async {
                     self.anomalieUpdated = true
-                    debugPrint("Anomalie updated...")
+
+                    if let index = self.anomalies.firstIndex(where: {$0.anomalie_id == id}) {
+                        self.anomalies[index].commentaire = commentaire
+                        self.anomalies[index].etat = etat
+                        debugPrint("Anomalie updated... : \(self.anomalies[index])")
+                    }
+
                 }
             }
         

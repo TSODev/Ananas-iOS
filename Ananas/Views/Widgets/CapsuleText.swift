@@ -16,8 +16,8 @@ struct CapsuleText: View {
 
             Text(text)
                 .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
-                .font(.body)
-                .foregroundColor(.black)
+                .font(.caption)
+                .foregroundColor(.gray)
                 .padding(.vertical, 8)
                 .padding(.horizontal, 20)
                 .overlay(

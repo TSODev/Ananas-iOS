@@ -68,9 +68,9 @@ struct AnomalieDetailsView: View {
             .padding(.bottom)
             
         }
-        .background(Color.white)
+//        .background(Color.white)
         .cornerRadius(10)
-        .shadow(radius: 15)
+//        .shadow(radius: 15)
         .padding(.horizontal)
 //        })
         

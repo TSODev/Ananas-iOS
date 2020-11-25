@@ -58,22 +58,13 @@ struct AnomalieDetailsViewCompact: View {
                     .padding(.vertical,5)
                 }
             }
-
-
-
-
-
-            
+           
             VStack(alignment: .leading) {
                 AnomalieUpdateFormViewCompact(anomalie: anomalie)
             }
             .padding(.top, 20)
             .padding(.bottom)
-            
         }
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(radius: 15)
         .padding(.horizontal)
 //        })
         
@@ -84,6 +75,7 @@ struct AnomalieDetailsViewCompact: View {
 struct AnomalieDetailsViewCompact_Previews: PreviewProvider {
     static var previews: some View {
         AnomalieDetailsViewCompact(anomalie: sampleAnomalie1)
+            .colorScheme(.light)
         AnomalieDetailsViewCompact(anomalie: sampleAnomalie2)
         AnomalieDetailsViewCompact(anomalie: sampleAnomalie3)
     }

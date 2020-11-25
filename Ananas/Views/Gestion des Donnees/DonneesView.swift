@@ -52,6 +52,6 @@ struct DonneesView: View {
 
 struct DonneesView_Previews: PreviewProvider {
     static var previews: some View {
-        DonneesView(donnees: [], metadata: [])
+        DonneesView(donnees: [sampleDatafile1], metadata: [sampleMetada1, sampleMetada2, sampleMetada3])
     }
 }

@@ -15,10 +15,11 @@ struct DatafileTileView: View {
         
         HStack {
             VStack(spacing: 0) {
-                Rectangle()
-                    .frame( height: 20)
-                    .foregroundColor(.purple)
+
                 HStack{
+                    Image(systemName: "filemenu.and.cursorarrow")
+                        .font(.system(size: 40, weight: .regular))
+                        .foregroundColor(.purple)
                     Text("Fichier HRA")
                         .font(.largeTitle)
                     Spacer()
@@ -41,10 +42,7 @@ struct DatafileTileView: View {
                 .padding()
 
             }
-            .background(Color.white)
         }
-            .cornerRadius(10)
-            .shadow(radius: 10)
             .padding()
     }
     
@@ -54,5 +52,8 @@ struct DatafileTileView: View {
 struct DatafileTileView_Previews: PreviewProvider {
     static var previews: some View {
         DatafileTileView(datafile: sampleDatafile1)
+            .colorScheme(.light)
+        DatafileTileView(datafile: sampleDatafile1)
+            .colorScheme(.dark)
     }
 }

@@ -29,7 +29,7 @@ struct PeopleDetailsView: View {
     var large: some View {
         VStack {
             VStack(spacing: 0) {
-                Image("default-avatar")
+                Image("ananas-avatar")
                 HStack {
                     Text(people.fullname)
                         .font(.largeTitle)
@@ -56,7 +56,7 @@ struct PeopleDetailsView: View {
             }
             .padding()
             VStack {
-                AnomalieListViewCompact(anomaliesList: anomalies, noAnomalieText: "Aucune anomalie détectée")
+                AnomaliesListViewCompact(anomaliesList: anomalies, noAnomalieText: "Aucune anomalie détectée")
             }
         }
 
@@ -67,5 +67,7 @@ struct PeopleDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         
         PeopleDetailsView(people: samplePeople1, anomalies: [sampleAnomalie1,sampleAnomalie1,sampleAnomalie1,sampleAnomalie1])
+            .preferredColorScheme(.light)
+        PeopleDetailsView(people: samplePeople1, anomalies: [sampleAnomalie1,sampleAnomalie1,sampleAnomalie1,sampleAnomalie1]).preferredColorScheme(.dark)
     }
 }

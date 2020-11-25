@@ -27,10 +27,10 @@ struct AnomalieUpdateFormViewCompact: View {
             //Form {
                 HStack{
                     VStack{
-                        HStack {
-                            FormLabelView(title: "Etat", iconSystemName: "capsule.fill", color: .purple)
-                            Spacer()
-                        }
+//                        HStack {
+//                            FormLabelView(title: "Etat", iconSystemName: "capsule.fill", color: .purple)
+//                            Spacer()
+//                        }
                             HStack{
 
                                 Picker("Select: \(selectedEtat.rawValue)", selection: $selectedEtat) {

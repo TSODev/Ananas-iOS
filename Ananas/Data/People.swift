@@ -121,3 +121,18 @@ var samplePeople1: People {
     
     return people
 }
+
+var samplePeople2: People {
+    let people = People()
+    
+    people.people_id =  2
+    people.source = 1
+    people.matricule = 258721
+    people.tgi = "T0117428"
+    people.fullname = "LE DOUSSAL Charles Edouard"
+    people.posact = "1PA"
+    people.entree = "2010-05-02T22:00:00.000Z".toDate()!.date
+    people.createddate = "2020-10-31T00:00:00.000Z".toDate()!.date
+    
+    return people
+}

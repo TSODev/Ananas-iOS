@@ -11,79 +11,59 @@ struct PeopleTileView: View {
 //    #if !os(macOS)
 //    @Environment(\.horizontalSizeClass) var horizontalSizeClass
 //    #endif
-    @ObservedObject var people: People
-    var anomalies: [Anomalie]
-
+//    @ObservedObject var people: People
+    var people: People
+    @ObservedObject var data = DataController.shared
+    
     
     var body: some View {
         HStack {
+        HStack {
+            let anomalies = data.anomalies.filter({$0.people_id == people.people_id})
             VStack(spacing: 0) {
-                VStack {
-                    HStack{
+                HStack {
+                    HStack {
                         if (anomalies.count > 0) {
-                            Rectangle()
-                                .frame( height: 15)
+                            Image(systemName: "person.crop.circle.badge.exclamationmark")
+                                .font(.system(size: 40, weight: .regular))
                                 .foregroundColor(/*@START_MENU_TOKEN@*/.red/*@END_MENU_TOKEN@*/)
                         } else {
-                            Rectangle()
-                                .frame( height: 15)
+                            Image(systemName: "person.crop.circle.badge.checkmark")
+                                .font(.system(size: 40, weight: .regular))
                                 .foregroundColor(.green)
-                        }
-
-                    }
-                    HStack {
-
-                        HStack{
-                            HStack {
-                                Text("TGI: \(people.tgi)")
                             }
-                            Spacer()
-                            HStack {
-                                Text("\( people.matricule)")
-                            }
-                        }
-                        .padding(.horizontal)
-                        .font(.body)
                     }
-                }
-                    HStack {
+//                            Spacer()
                         Text(people.fullname)
-                            .font(.title2)
-//                            .padding(10)
+                                .font(.title2)
                         Spacer()
-
+                }
+                .padding(.horizontal)
+                HStack {
+                    HStack{
+                        if (anomalies.count > 0) {
+                            PeopleAnomalieStateView(anomalies: anomalies)
+                        }
                     }
-                    .padding()
-
-//                HStack {
-//                    HStack{
-//                        if (anomalies.count > 0) {
-//                            PeopleAnomaliesStateView(anomalies: anomalies)
-//                        }
-//                    }
-//                    Spacer()
-//                }
-//                .padding(.horizontal,10)
-//                .padding(.bottom, 5)
+                    Spacer()
+                }
+                .padding(.horizontal,10)
+                .padding(.bottom, 5)
 
                 }
-                .background(Color.white)
                 .font(.title3)
- //               .padding(.trailing, 10)
-                .background(Color.white)
             }
-            .cornerRadius(10)
-            .shadow(radius: 10)
-            .padding()
+        .frame(width: 350, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
         }
+    }
 
 }
 
 struct PeopleTileView_Previews: PreviewProvider {
     static var previews: some View {
 
-        PeopleTileView(people: samplePeople1, anomalies: [sampleAnomalie1, sampleAnomalie2, sampleAnomalie3])
-        PeopleTileView(people: samplePeople1, anomalies: [])
+        PeopleTileView(people: samplePeople1)
+        PeopleTileView(people: samplePeople2)
 
     }
 }

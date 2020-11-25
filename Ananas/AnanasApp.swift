@@ -14,12 +14,11 @@ struct AnanasApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(isLoading: data.appIsLoading, peoples: data.peoples, datafiles: data.datafiles, metadata: data.metadata)
                 .onAppear {
                     DataController.shared.sendAdminLoginRequest()
                 }
                 .onReceive(data.$logged, perform: { userLogged in
-                    debugPrint("logged ? \(userLogged)")
                     if (userLogged) {
                         DataController.shared.sendGetAllPeopleRequest()
                         DataController.shared.sendGetAllAnomaliesFromViewRequest()

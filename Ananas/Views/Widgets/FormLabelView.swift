@@ -18,6 +18,7 @@ struct FormLabelView: View {
             Text(title)
         } icon: {
             Image(systemName: iconSystemName)
+                .font(.system(size: 20, weight: .regular))
                 .padding(4)
                 .background(color)
                 .cornerRadius(7)

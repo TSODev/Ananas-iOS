@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnomalieListViewCompact: View {
+struct AnomaliesListViewCompact: View {
     var anomaliesList: [Anomalie]
     var noAnomalieText: String
     
@@ -29,7 +29,8 @@ struct AnomalieListViewCompact: View {
                         )
                         .buttonStyle(PlainButtonStyle())
                         .font(.title2)
-                        .padding(.vertical,5)
+ //                       .padding(.vertical,5)
+                        Divider()
                     }
                 }
 
@@ -41,8 +42,8 @@ struct AnomalieListViewCompact: View {
 struct AnomalieListViewCompact_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AnomaliesListView(anomaliesList: [sampleAnomalie1, sampleAnomalie2], noAnomalieText: "Tout est normal")
-            AnomaliesListView(anomaliesList: [], noAnomalieText: "Tout est normal")
+            AnomaliesListViewCompact(anomaliesList: [sampleAnomalie1, sampleAnomalie2], noAnomalieText: "Tout est normal")
+            AnomaliesListViewCompact(anomaliesList: [], noAnomalieText: "Tout est normal")
         }
     }
 }

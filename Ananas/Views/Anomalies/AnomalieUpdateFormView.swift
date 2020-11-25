@@ -49,7 +49,7 @@ struct AnomalieUpdateFormView: View {
                                 HStack {
                                     FormLabelView(title: "Commentaire", iconSystemName: "pencil", color: .yellow)
                                     TextEditor(text: $commentaire)
-                                        .foregroundColor(Color.gray)
+ //                                       .foregroundColor(Color.gray)
                                         .padding(.vertical)
                                         .font(.body)
                                         .border(Color.gray, width: 1)

@@ -16,10 +16,10 @@ struct MetadataTileView: View {
         
         HStack {
             VStack(spacing: 0) {
-                Rectangle()
-                    .frame( height: 20)
-                    .foregroundColor(.blue)
                 HStack{
+                    Image(systemName: "filemenu.and.cursorarrow")
+                        .font(.system(size: 40, weight: .regular))
+                        .foregroundColor(.blue)
                     Text("Fichier LN")
                         .font(.largeTitle)
                     Spacer()
@@ -42,10 +42,7 @@ struct MetadataTileView: View {
                 .padding()
 
             }
-            .background(Color.white)
         }
-            .cornerRadius(10)
-            .shadow(radius: 10)
             .padding()
     }
     

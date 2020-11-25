@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		900B1B70256996B5000ADE22 /* DatafileTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900B1B6F256996B5000ADE22 /* DatafileTileView.swift */; };
+		90365BAC256C3DD2009D8C52 /* PeopleAnomalieStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BAB256C3DD2009D8C52 /* PeopleAnomalieStateView.swift */; };
+		90365BAF256CF8FA009D8C52 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BAE256CF8FA009D8C52 /* SearchBar.swift */; };
+		90365BB6256CFE1B009D8C52 /* PeopleTileViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BB5256CFE1B009D8C52 /* PeopleTileViewCompact.swift */; };
+		90365BB9256D1B81009D8C52 /* LineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BB8256D1B81009D8C52 /* LineWidget.swift */; };
+		90365BBC256D213A009D8C52 /* PeopleListViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BBB256D213A009D8C52 /* PeopleListViewCompact.swift */; };
+		90365BC5256D37A1009D8C52 /* FilteredPeopleViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BC4256D37A1009D8C52 /* FilteredPeopleViewCompact.swift */; };
+		90365BC9256D38AC009D8C52 /* FilteredPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BC8256D38AC009D8C52 /* FilteredPeopleView.swift */; };
 		9055FABE256A54C30020FE70 /* TextMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055FABD256A54C30020FE70 /* TextMetadata.swift */; };
 		9055FAC1256A5E320020FE70 /* FileChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055FAC0256A5E320020FE70 /* FileChooser.swift */; };
 		9055FAC5256A621B0020FE70 /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 9055FAC4256A621B0020FE70 /* CoreXLSX */; };
@@ -39,10 +46,12 @@
 		90BCFCC225641C6900AC88A9 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BCFCC125641C6900AC88A9 /* PeopleView.swift */; };
 		90BCFCC525641C7C00AC88A9 /* LNAbsencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BCFCC425641C7C00AC88A9 /* LNAbsencesView.swift */; };
 		90BCFCC825641C8F00AC88A9 /* HRAAbsencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BCFCC725641C8F00AC88A9 /* HRAAbsencesView.swift */; };
+		90C02C2E256E328C003A32F6 /* AnomalieStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C02C2D256E328C003A32F6 /* AnomalieStateView.swift */; };
+		90C02C31256E3563003A32F6 /* StateTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C02C30256E3563003A32F6 /* StateTileView.swift */; };
 		90D24FB525668D2D000B9EAE /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 90D24FB425668D2D000B9EAE /* SwiftDate */; };
 		90D24FB925669E3B000B9EAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D24FB825669E3B000B9EAE /* User.swift */; };
 		90D24FBD2566A551000B9EAE /* PeopleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D24FBC2566A551000B9EAE /* PeopleDetailsView.swift */; };
-		90E0D97C256AF8C8009BAF42 /* AnomalieListViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E0D97B256AF8C8009BAF42 /* AnomalieListViewCompact.swift */; };
+		90E0D97C256AF8C8009BAF42 /* AnomaliesListViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E0D97B256AF8C8009BAF42 /* AnomaliesListViewCompact.swift */; };
 		90E0D97F256AFA6A009BAF42 /* AnomalieTileViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E0D97E256AFA6A009BAF42 /* AnomalieTileViewCompact.swift */; };
 		90E0D983256AFE72009BAF42 /* AnomalieDetailsViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E0D982256AFE72009BAF42 /* AnomalieDetailsViewCompact.swift */; };
 		90E0D986256B018E009BAF42 /* AnomalieUpdateFormViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E0D985256B018E009BAF42 /* AnomalieUpdateFormViewCompact.swift */; };
@@ -53,6 +62,13 @@
 
 /* Begin PBXFileReference section */
 		900B1B6F256996B5000ADE22 /* DatafileTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatafileTileView.swift; sourceTree = "<group>"; };
+		90365BAB256C3DD2009D8C52 /* PeopleAnomalieStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAnomalieStateView.swift; sourceTree = "<group>"; };
+		90365BAE256CF8FA009D8C52 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		90365BB5256CFE1B009D8C52 /* PeopleTileViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTileViewCompact.swift; sourceTree = "<group>"; };
+		90365BB8256D1B81009D8C52 /* LineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineWidget.swift; sourceTree = "<group>"; };
+		90365BBB256D213A009D8C52 /* PeopleListViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewCompact.swift; sourceTree = "<group>"; };
+		90365BC4256D37A1009D8C52 /* FilteredPeopleViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredPeopleViewCompact.swift; sourceTree = "<group>"; };
+		90365BC8256D38AC009D8C52 /* FilteredPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredPeopleView.swift; sourceTree = "<group>"; };
 		9055FABD256A54C30020FE70 /* TextMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMetadata.swift; sourceTree = "<group>"; };
 		9055FAC0256A5E320020FE70 /* FileChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileChooser.swift; sourceTree = "<group>"; };
 		9055FAC7256A62300020FE70 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -85,9 +101,11 @@
 		90BCFCC125641C6900AC88A9 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		90BCFCC425641C7C00AC88A9 /* LNAbsencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNAbsencesView.swift; sourceTree = "<group>"; };
 		90BCFCC725641C8F00AC88A9 /* HRAAbsencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRAAbsencesView.swift; sourceTree = "<group>"; };
+		90C02C2D256E328C003A32F6 /* AnomalieStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomalieStateView.swift; sourceTree = "<group>"; };
+		90C02C30256E3563003A32F6 /* StateTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTileView.swift; sourceTree = "<group>"; };
 		90D24FB825669E3B000B9EAE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		90D24FBC2566A551000B9EAE /* PeopleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsView.swift; sourceTree = "<group>"; };
-		90E0D97B256AF8C8009BAF42 /* AnomalieListViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomalieListViewCompact.swift; sourceTree = "<group>"; };
+		90E0D97B256AF8C8009BAF42 /* AnomaliesListViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomaliesListViewCompact.swift; sourceTree = "<group>"; };
 		90E0D97E256AFA6A009BAF42 /* AnomalieTileViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomalieTileViewCompact.swift; sourceTree = "<group>"; };
 		90E0D982256AFE72009BAF42 /* AnomalieDetailsViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomalieDetailsViewCompact.swift; sourceTree = "<group>"; };
 		90E0D985256B018E009BAF42 /* AnomalieUpdateFormViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomalieUpdateFormViewCompact.swift; sourceTree = "<group>"; };
@@ -110,13 +128,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90365BBE256D3637009D8C52 /* Compact */ = {
+			isa = PBXGroup;
+			children = (
+				90365BC4256D37A1009D8C52 /* FilteredPeopleViewCompact.swift */,
+				90365BBB256D213A009D8C52 /* PeopleListViewCompact.swift */,
+				90365BB5256CFE1B009D8C52 /* PeopleTileViewCompact.swift */,
+			);
+			path = Compact;
+			sourceTree = "<group>";
+		};
 		9060016D2569802100E25B68 /* Personnes */ = {
 			isa = PBXGroup;
 			children = (
+				90365BBE256D3637009D8C52 /* Compact */,
 				90BCFCC125641C6900AC88A9 /* PeopleView.swift */,
 				90D24FBC2566A551000B9EAE /* PeopleDetailsView.swift */,
 				90A88AA62566AB91002AA39C /* PeopleListView.swift */,
 				90A88AA92566AC57002AA39C /* PeopleTileView.swift */,
+				90365BAB256C3DD2009D8C52 /* PeopleAnomalieStateView.swift */,
+				90365BC8256D38AC009D8C52 /* FilteredPeopleView.swift */,
 			);
 			path = Personnes;
 			sourceTree = "<group>";
@@ -169,6 +200,10 @@
 				9055FABD256A54C30020FE70 /* TextMetadata.swift */,
 				9055FAC7256A62300020FE70 /* ActivityIndicator.swift */,
 				9055FAD1256AC7CC0020FE70 /* DateWidget.swift */,
+				90365BAE256CF8FA009D8C52 /* SearchBar.swift */,
+				90365BB8256D1B81009D8C52 /* LineWidget.swift */,
+				90C02C2D256E328C003A32F6 /* AnomalieStateView.swift */,
+				90C02C30256E3563003A32F6 /* StateTileView.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -230,7 +265,7 @@
 		90E0D988256B04E4009BAF42 /* Compact */ = {
 			isa = PBXGroup;
 			children = (
-				90E0D97B256AF8C8009BAF42 /* AnomalieListViewCompact.swift */,
+				90E0D97B256AF8C8009BAF42 /* AnomaliesListViewCompact.swift */,
 				90E0D97E256AFA6A009BAF42 /* AnomalieTileViewCompact.swift */,
 				90E0D982256AFE72009BAF42 /* AnomalieDetailsViewCompact.swift */,
 				90E0D985256B018E009BAF42 /* AnomalieUpdateFormViewCompact.swift */,
@@ -320,7 +355,9 @@
 				900B1B70256996B5000ADE22 /* DatafileTileView.swift in Sources */,
 				90D24FBD2566A551000B9EAE /* PeopleDetailsView.swift in Sources */,
 				90BCFCC525641C7C00AC88A9 /* LNAbsencesView.swift in Sources */,
-				90E0D97C256AF8C8009BAF42 /* AnomalieListViewCompact.swift in Sources */,
+				90365BB6256CFE1B009D8C52 /* PeopleTileViewCompact.swift in Sources */,
+				90E0D97C256AF8C8009BAF42 /* AnomaliesListViewCompact.swift in Sources */,
+				90365BBC256D213A009D8C52 /* PeopleListViewCompact.swift in Sources */,
 				90A88AB12566CB9A002AA39C /* AnomaliesListView.swift in Sources */,
 				90A88ABA2567BDA7002AA39C /* CapsuleText.swift in Sources */,
 				906001582569611300E25B68 /* DonneesView.swift in Sources */,
@@ -328,6 +365,8 @@
 				9060015B2569622F00E25B68 /* DatafileHRAListView.swift in Sources */,
 				9055FAC8256A62300020FE70 /* ActivityIndicator.swift in Sources */,
 				90BCFCC225641C6900AC88A9 /* PeopleView.swift in Sources */,
+				90C02C2E256E328C003A32F6 /* AnomalieStateView.swift in Sources */,
+				90365BB9256D1B81009D8C52 /* LineWidget.swift in Sources */,
 				9055FAC1256A5E320020FE70 /* FileChooser.swift in Sources */,
 				90E528D32567E9E1003FC626 /* FormLabelView.swift in Sources */,
 				90A88AAE2566C7C6002AA39C /* Anomalie.swift in Sources */,
@@ -336,17 +375,22 @@
 				9055FAD2256AC7CC0020FE70 /* DateWidget.swift in Sources */,
 				90A88AB42566CDAE002AA39C /* AnomalieDetailsView.swift in Sources */,
 				90E528D62567F8D4003FC626 /* AnomalieUpdateFormView.swift in Sources */,
+				90365BC9256D38AC009D8C52 /* FilteredPeopleView.swift in Sources */,
+				90365BAC256C3DD2009D8C52 /* PeopleAnomalieStateView.swift in Sources */,
 				90A88AB72566CFE5002AA39C /* AnomalieTileView.swift in Sources */,
+				90C02C31256E3563003A32F6 /* StateTileView.swift in Sources */,
 				9060016B25697A0300E25B68 /* Datafile.swift in Sources */,
 				9055FABE256A54C30020FE70 /* TextMetadata.swift in Sources */,
 				90A88AAA2566AC57002AA39C /* PeopleTileView.swift in Sources */,
 				90896B0F25642A6600246627 /* People.swift in Sources */,
 				90896B0B256429DC00246627 /* DataControler.swift in Sources */,
+				90365BAF256CF8FA009D8C52 /* SearchBar.swift in Sources */,
 				90E0D983256AFE72009BAF42 /* AnomalieDetailsViewCompact.swift in Sources */,
 				90A88AA72566AB91002AA39C /* PeopleListView.swift in Sources */,
 				90BCFCBF25641B1000AC88A9 /* AnanasSidebarView.swift in Sources */,
 				906001682569732D00E25B68 /* Metadata.swift in Sources */,
 				90E0D97F256AFA6A009BAF42 /* AnomalieTileViewCompact.swift in Sources */,
+				90365BC5256D37A1009D8C52 /* FilteredPeopleViewCompact.swift in Sources */,
 				90BCFCA6256418A600AC88A9 /* MainView.swift in Sources */,
 				9060016025696B4300E25B68 /* MetadataView.swift in Sources */,
 				90BA3FFF2567C4BB000CA50E /* SliderEtat.swift in Sources */,

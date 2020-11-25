@@ -15,16 +15,16 @@ struct AnomalieTileView: View {
         VStack {
             HStack {
                 if (anomalie.etat == 1) {
-                    Circle()
-                        .frame(width: 20, height: 20, alignment: .leading)
+                    Image(systemName: "exclamationmark.triangle.fill")
+                        .font(.system(size: 40, weight: .regular))
                         .foregroundColor(.red)
                 } else if (anomalie.etat == 2) {
-                    Circle()
-                        .frame(width: 20, height: 20, alignment: .leading)
+                    Image(systemName: "circle.dashed.inset.fill")
+                        .font(.system(size: 40, weight: .regular))
                         .foregroundColor(.orange)
                 } else {
-                    Circle()
-                        .frame(width: 20, height: 20, alignment: .leading)
+                    Image(systemName: "checkmark.square.fill")
+                        .font(.system(size: 40, weight: .regular))
                         .foregroundColor(.green)
                 }
 
@@ -38,11 +38,15 @@ struct AnomalieTileView: View {
                 if (anomalie.anomalie_from == "LN") {
                     Image(systemName: "arrow.left.square.fill")
                 }
+                if (anomalie.anomalie_from == "BOTH") {
+                    Image(systemName: "arrow.left.arrow.right.square.fill")
+                }
                 CapsuleText(text: anomalie.lncode)
 //                CapsuleText(text: "\(anomalie.hracode) " + " / " + "\(anomalie.lncode) ")
                 Spacer()
                 Text(anomalie.libelle)
                     .font(.body)
+                    .frame(width: 350, height: 50, alignment: .trailing)
             }
             .padding(.horizontal, 10)
         }
