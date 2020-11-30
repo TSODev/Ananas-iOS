@@ -21,7 +21,7 @@ struct AnomaliesListView: View {
                         .padding(.top, 50)
                         .padding(.horizontal, 20)
                 } else {
-                    ForEach(anomaliesList) { anomalie in
+                    ForEach(anomaliesList.sorted(), id: \.self.debut) { anomalie in
                         NavigationLink(
                             destination: AnomalieDetailsView(anomalie: anomalie),
                             label: {AnomalieTileView(anomalie: anomalie)}
@@ -41,7 +41,7 @@ struct AnomaliesListView: View {
 struct AnomaliesListView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AnomaliesListView(anomaliesList: [sampleAnomalie1, sampleAnomalie2], noAnomalieText: "Tout est normal")
+            AnomaliesListView(anomaliesList: [sampleAnomalie1, sampleAnomalie2, sampleAnomalie3], noAnomalieText: "Tout est normal")
             AnomaliesListView(anomaliesList: [], noAnomalieText: "Tout est normal")
         }
 

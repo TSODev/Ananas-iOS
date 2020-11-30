@@ -11,7 +11,7 @@ struct PeopleDetailsView: View {
 
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
-    @ObservedObject var people: People
+    var people: People
     var anomalies: [Anomalie]
     @State var deleted = false
     
@@ -34,7 +34,6 @@ struct PeopleDetailsView: View {
                     Text(people.fullname)
                         .font(.largeTitle)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-//                    Spacer()
                 }
                 .padding()
 

@@ -7,29 +7,40 @@
 
 
 import SwiftUI
+import Combine
 
-struct SearchBar: View {
-    @Binding var searchText: String
-    @Binding var isSearching: Bool
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
+
+struct FilterBar: View {
+
+    @State var isSearching: Bool = false
+    @ObservedObject var engine:TextEngine
+    
     var body: some View {
         HStack {
             HStack {
-                TextField("Filtre par nom", text: $searchText)
+//                TextField("Filtre par nom", text: $searchText)
+                TextField("Filtre par nom", text: $engine.textInput)
+                    .disableAutocorrection(true)
                     .padding(.leading, 24)
             }
             .padding()
             .background(Color(.systemGray5))
             .cornerRadius(6)
             .padding(.horizontal)
-            .onTapGesture {
-                isSearching = true
-            }
+            .onTapGesture(perform: { isSearching = true})
             .overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")
                         Spacer()
                         if (isSearching) {
-                            Button(action: {searchText = ""}, label: {
+                            Button(action: {engine.textInput = ""}, label: {
                                 Image(systemName: "xmark.circle.fill")
                                     .padding(.vertical)
                             })
@@ -45,8 +56,8 @@ struct SearchBar: View {
                 if (isSearching) {
                     Button(action: {
                         isSearching = false
-                        searchText = ""
-                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                        engine.textInput = ""
+                        self.hideKeyboard()
                     }, label: {
                         Text("Annule")
                             .padding(.trailing)
@@ -59,13 +70,13 @@ struct SearchBar: View {
             }
 
         }
-
     }
 
 }
 
-//struct SearchBar_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SearchBar(searchText: <#Binding<String>#>, isSearching: <#Binding<Bool>#>)
-//    }
-//}
+struct SearchBar_Previews: PreviewProvider {
+    static var previews: some View {
+        FilterBar(engine: (TextEngine()))
+        FilterBar(engine: (TextEngine()))
+    }
+}

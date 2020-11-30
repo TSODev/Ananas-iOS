@@ -21,7 +21,7 @@ struct AnomaliesListViewCompact: View {
                         .padding(.top, 50)
                         .padding(.horizontal, 20)
                 } else {
-                    ForEach(anomaliesList) { anomalie in
+                    ForEach(anomaliesList.sorted(), id: \.self.debut) { anomalie in
                         NavigationLink(
                             destination: AnomalieDetailsViewCompact(anomalie: anomalie),
                             label: {AnomalieTileViewCompact(anomalie: anomalie)}

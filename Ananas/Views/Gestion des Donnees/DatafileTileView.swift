@@ -38,12 +38,13 @@ struct DatafileTileView: View {
                     DateWidget(date: datafile.loadDate, format: "dd MMMM YYYY HH:MM")
                         .font(.callout)
                     Spacer()
+                    Text("\(datafile.nbrecords) enr.")
+                        .font(.callout)
                 }
                 .padding()
-
             }
         }
-            .padding()
+
     }
     
     }

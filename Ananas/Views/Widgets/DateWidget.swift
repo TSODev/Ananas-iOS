@@ -13,7 +13,7 @@ struct DateWidget: View {
     var format: String
     var body: some View {
         Text(date.toFormat(format, locale: Locales.french))
-            .frame(width: 150, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(width: 200, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
     }
 }
 

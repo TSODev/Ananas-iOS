@@ -13,7 +13,7 @@ struct FilteredPeopleViewCompact: View {
     
     var body: some View {
         let anomalies = self.anomalies.filter({$0.people_id == people.people_id})
-
+        let anomaliesContainer = AnomalieContainer(anomalies: anomalies)
         NavigationLink(
             destination: PeopleDetailsView(people: people, anomalies: anomalies ),
             label: {PeopleTileViewCompact(people: people)

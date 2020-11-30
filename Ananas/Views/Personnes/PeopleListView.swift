@@ -7,58 +7,63 @@
 
 import SwiftUI
 
-struct PeopleListView: View {
-    var peoples: [People]
-    var noEventsText: String
-    var isDiscover = false
-    @ObservedObject var data = DataController.shared
+let engine = TextEngine()
 
-    @State var searchText = ""
-    @State var isSearching = false
+struct PeopleListView: View {
+
+
+    var noEventsText: String = "En attente ..."
+
+    @ObservedObject var data = DataController.shared
+    @ObservedObject var peoples: PeopleContainer = DataController.shared.builtPeoples
+    @ObservedObject var engine: TextEngine = TextEngine()
+    
+//    @State var name: String
+//    @State var tgi: String
+//    @State var matricule: String
     
     var body: some View {
 
                 VStack {
-         
-                SearchBar(searchText: $searchText, isSearching: $isSearching)
-                ScrollView {
+                    FilterBar(engine: engine)
+                    .padding()
 
+                    ScrollView {
+                            VStack {
+                                if (self.data.builtPeoples.count == 0) {
+                                    NoEvent()
+                                } else {
+                                    let filteredPeople = self.data.builtPeoples.content.filter({$0.fullname.uppercased().contains(engine.textOutput.uppercased()) || engine.textOutput.isEmpty })
+                                    if (filteredPeople.isEmpty) {
+                                        NobodyWidget()
+                                    } else {
+                                        ForEach(filteredPeople.sorted(), id: \.self.fullname) { people in
+                                            let anomaliesForPeopleIndex = self.data.builtPeoples.anomaliesForPeople.firstIndex(where: {$0.people_id == people.people_id})
+                                                NavigationLink(
+                                                    destination: PeopleDetailsView(people: people, anomalies: self.data.builtPeoples.anomaliesForPeople[anomaliesForPeopleIndex!].anomalies.content),
+                                                    label: {
+                                                        PeopleTileView(people: people)
+                                                    })
+                                                .buttonStyle(PlainButtonStyle())
+                                                Divider()
 
-
-                    VStack {
-                        if peoples.count == 0 {
-                            Text(noEventsText)
-                                .bold()
-                                .multilineTextAlignment(.center)
-                                .padding(.top, 50)
-                                .padding(.horizontal, 20)
-                        } else {
-                            ForEach(peoples.filter({$0.fullname.uppercased().contains(searchText.uppercased()) || searchText.isEmpty })) { people in
-                                let anomalies = DataController.shared.anomalies.filter({$0.people_id == people.people_id})
-                                NavigationLink(
-                                    destination: PeopleDetailsView(people: people, anomalies: anomalies),
-                                    label: {
-                                        PeopleTileView(people: people)
-                                    })
-                                .buttonStyle(PlainButtonStyle())
-                                Divider()
+                                    }
+                                    }
+                                }
                             }
                         }
-                    }
-                }
-                .frame(minWidth:250)
-                .navigationTitle("Collaborateurs")
-
-
+                        .frame(minWidth:250)
+                        .navigationTitle("Collaborateurs")
         }
     }
 }
 
+
 struct PeopleListView_Previews: PreviewProvider {
     static var previews: some View {
-            PeopleListView(peoples: [samplePeople1,samplePeople2], noEventsText: "Nothing here :(")
+            PeopleListView()
                 .colorScheme(.light)
-        PeopleListView(peoples: [samplePeople1,samplePeople2], noEventsText: "Nothing here :(")
+        PeopleListView()
             .colorScheme(.dark)
 
 

@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		900B1B70256996B5000ADE22 /* DatafileTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900B1B6F256996B5000ADE22 /* DatafileTileView.swift */; };
 		90365BAC256C3DD2009D8C52 /* PeopleAnomalieStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BAB256C3DD2009D8C52 /* PeopleAnomalieStateView.swift */; };
-		90365BAF256CF8FA009D8C52 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BAE256CF8FA009D8C52 /* SearchBar.swift */; };
+		90365BAF256CF8FA009D8C52 /* FilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BAE256CF8FA009D8C52 /* FilterBar.swift */; };
 		90365BB6256CFE1B009D8C52 /* PeopleTileViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BB5256CFE1B009D8C52 /* PeopleTileViewCompact.swift */; };
 		90365BB9256D1B81009D8C52 /* LineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BB8256D1B81009D8C52 /* LineWidget.swift */; };
 		90365BBC256D213A009D8C52 /* PeopleListViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BBB256D213A009D8C52 /* PeopleListViewCompact.swift */; };
 		90365BC5256D37A1009D8C52 /* FilteredPeopleViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BC4256D37A1009D8C52 /* FilteredPeopleViewCompact.swift */; };
-		90365BC9256D38AC009D8C52 /* FilteredPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90365BC8256D38AC009D8C52 /* FilteredPeopleView.swift */; };
 		9055FABE256A54C30020FE70 /* TextMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055FABD256A54C30020FE70 /* TextMetadata.swift */; };
 		9055FAC1256A5E320020FE70 /* FileChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055FAC0256A5E320020FE70 /* FileChooser.swift */; };
 		9055FAC5256A621B0020FE70 /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 9055FAC4256A621B0020FE70 /* CoreXLSX */; };
 		9055FAC8256A62300020FE70 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055FAC7256A62300020FE70 /* ActivityIndicator.swift */; };
 		9055FAD2256AC7CC0020FE70 /* DateWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055FAD1256AC7CC0020FE70 /* DateWidget.swift */; };
+		905C9B292572411300642785 /* PeopleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C9B282572411300642785 /* PeopleContainer.swift */; };
 		905D6E5425657C7600D9AA56 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 905D6E5325657C7600D9AA56 /* Alamofire */; };
 		906001582569611300E25B68 /* DonneesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906001572569611300E25B68 /* DonneesView.swift */; };
 		9060015B2569622F00E25B68 /* DatafileHRAListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060015A2569622F00E25B68 /* DatafileHRAListView.swift */; };
@@ -27,6 +27,10 @@
 		9060016425696CF300E25B68 /* MetadataTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060016325696CF300E25B68 /* MetadataTileView.swift */; };
 		906001682569732D00E25B68 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906001672569732D00E25B68 /* Metadata.swift */; };
 		9060016B25697A0300E25B68 /* Datafile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9060016A25697A0300E25B68 /* Datafile.swift */; };
+		906E3D3E256FA87D00400FE3 /* PeopleTileByGlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906E3D3D256FA87D00400FE3 /* PeopleTileByGlobalState.swift */; };
+		906E3D4C256FDDC500400FE3 /* AnomalieContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906E3D4B256FDDC500400FE3 /* AnomalieContainer.swift */; };
+		9078B9802570E31B00B03174 /* TextEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078B97F2570E31B00B03174 /* TextEngine.swift */; };
+		907D43362570F3E1008E319F /* NobodyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907D43352570F3E1008E319F /* NobodyWidget.swift */; };
 		90896B0B256429DC00246627 /* DataControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90896B0A256429DC00246627 /* DataControler.swift */; };
 		90896B0F25642A6600246627 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90896B0E25642A6600246627 /* People.swift */; };
 		90A88AA72566AB91002AA39C /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A88AA62566AB91002AA39C /* PeopleListView.swift */; };
@@ -43,11 +47,12 @@
 		90BCFCAB256418A700AC88A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90BCFCAA256418A700AC88A9 /* Preview Assets.xcassets */; };
 		90BCFCBC25641AFD00AC88A9 /* AnanasTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BCFCBB25641AFD00AC88A9 /* AnanasTabView.swift */; };
 		90BCFCBF25641B1000AC88A9 /* AnanasSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BCFCBE25641B1000AC88A9 /* AnanasSidebarView.swift */; };
-		90BCFCC225641C6900AC88A9 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BCFCC125641C6900AC88A9 /* PeopleView.swift */; };
 		90BCFCC525641C7C00AC88A9 /* LNAbsencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BCFCC425641C7C00AC88A9 /* LNAbsencesView.swift */; };
 		90BCFCC825641C8F00AC88A9 /* HRAAbsencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BCFCC725641C8F00AC88A9 /* HRAAbsencesView.swift */; };
+		90BD32F72574EDAB00C3FD76 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD32F62574EDAB00C3FD76 /* GlobalState.swift */; };
+		90BD32FB257529BD00C3FD76 /* NoEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BD32FA257529BD00C3FD76 /* NoEvent.swift */; };
+		90BD32FE2575488E00C3FD76 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 90BD32FD2575488E00C3FD76 /* Settings.bundle */; };
 		90C02C2E256E328C003A32F6 /* AnomalieStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C02C2D256E328C003A32F6 /* AnomalieStateView.swift */; };
-		90C02C31256E3563003A32F6 /* StateTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C02C30256E3563003A32F6 /* StateTileView.swift */; };
 		90D24FB525668D2D000B9EAE /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 90D24FB425668D2D000B9EAE /* SwiftDate */; };
 		90D24FB925669E3B000B9EAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D24FB825669E3B000B9EAE /* User.swift */; };
 		90D24FBD2566A551000B9EAE /* PeopleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D24FBC2566A551000B9EAE /* PeopleDetailsView.swift */; };
@@ -63,23 +68,27 @@
 /* Begin PBXFileReference section */
 		900B1B6F256996B5000ADE22 /* DatafileTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatafileTileView.swift; sourceTree = "<group>"; };
 		90365BAB256C3DD2009D8C52 /* PeopleAnomalieStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleAnomalieStateView.swift; sourceTree = "<group>"; };
-		90365BAE256CF8FA009D8C52 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		90365BAE256CF8FA009D8C52 /* FilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBar.swift; sourceTree = "<group>"; };
 		90365BB5256CFE1B009D8C52 /* PeopleTileViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTileViewCompact.swift; sourceTree = "<group>"; };
 		90365BB8256D1B81009D8C52 /* LineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineWidget.swift; sourceTree = "<group>"; };
 		90365BBB256D213A009D8C52 /* PeopleListViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewCompact.swift; sourceTree = "<group>"; };
 		90365BC4256D37A1009D8C52 /* FilteredPeopleViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredPeopleViewCompact.swift; sourceTree = "<group>"; };
-		90365BC8256D38AC009D8C52 /* FilteredPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredPeopleView.swift; sourceTree = "<group>"; };
 		9055FABD256A54C30020FE70 /* TextMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMetadata.swift; sourceTree = "<group>"; };
 		9055FAC0256A5E320020FE70 /* FileChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileChooser.swift; sourceTree = "<group>"; };
 		9055FAC7256A62300020FE70 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		9055FACB256A72DC0020FE70 /* Ananas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ananas.entitlements; sourceTree = "<group>"; };
 		9055FAD1256AC7CC0020FE70 /* DateWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWidget.swift; sourceTree = "<group>"; };
+		905C9B282572411300642785 /* PeopleContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleContainer.swift; sourceTree = "<group>"; };
 		906001572569611300E25B68 /* DonneesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonneesView.swift; sourceTree = "<group>"; };
 		9060015A2569622F00E25B68 /* DatafileHRAListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatafileHRAListView.swift; sourceTree = "<group>"; };
 		9060015F25696B4300E25B68 /* MetadataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataView.swift; sourceTree = "<group>"; };
 		9060016325696CF300E25B68 /* MetadataTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataTileView.swift; sourceTree = "<group>"; };
 		906001672569732D00E25B68 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
 		9060016A25697A0300E25B68 /* Datafile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datafile.swift; sourceTree = "<group>"; };
+		906E3D3D256FA87D00400FE3 /* PeopleTileByGlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTileByGlobalState.swift; sourceTree = "<group>"; };
+		906E3D4B256FDDC500400FE3 /* AnomalieContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomalieContainer.swift; sourceTree = "<group>"; };
+		9078B97F2570E31B00B03174 /* TextEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEngine.swift; sourceTree = "<group>"; };
+		907D43352570F3E1008E319F /* NobodyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobodyWidget.swift; sourceTree = "<group>"; };
 		90896B0A256429DC00246627 /* DataControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControler.swift; sourceTree = "<group>"; };
 		90896B0E25642A6600246627 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		90A88AA62566AB91002AA39C /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
@@ -98,11 +107,12 @@
 		90BCFCAC256418A700AC88A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90BCFCBB25641AFD00AC88A9 /* AnanasTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnanasTabView.swift; sourceTree = "<group>"; };
 		90BCFCBE25641B1000AC88A9 /* AnanasSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnanasSidebarView.swift; sourceTree = "<group>"; };
-		90BCFCC125641C6900AC88A9 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		90BCFCC425641C7C00AC88A9 /* LNAbsencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LNAbsencesView.swift; sourceTree = "<group>"; };
 		90BCFCC725641C8F00AC88A9 /* HRAAbsencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRAAbsencesView.swift; sourceTree = "<group>"; };
+		90BD32F62574EDAB00C3FD76 /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
+		90BD32FA257529BD00C3FD76 /* NoEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEvent.swift; sourceTree = "<group>"; };
+		90BD32FD2575488E00C3FD76 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		90C02C2D256E328C003A32F6 /* AnomalieStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomalieStateView.swift; sourceTree = "<group>"; };
-		90C02C30256E3563003A32F6 /* StateTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTileView.swift; sourceTree = "<group>"; };
 		90D24FB825669E3B000B9EAE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		90D24FBC2566A551000B9EAE /* PeopleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsView.swift; sourceTree = "<group>"; };
 		90E0D97B256AF8C8009BAF42 /* AnomaliesListViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomaliesListViewCompact.swift; sourceTree = "<group>"; };
@@ -142,12 +152,12 @@
 			isa = PBXGroup;
 			children = (
 				90365BBE256D3637009D8C52 /* Compact */,
-				90BCFCC125641C6900AC88A9 /* PeopleView.swift */,
 				90D24FBC2566A551000B9EAE /* PeopleDetailsView.swift */,
 				90A88AA62566AB91002AA39C /* PeopleListView.swift */,
 				90A88AA92566AC57002AA39C /* PeopleTileView.swift */,
 				90365BAB256C3DD2009D8C52 /* PeopleAnomalieStateView.swift */,
-				90365BC8256D38AC009D8C52 /* FilteredPeopleView.swift */,
+				906E3D3D256FA87D00400FE3 /* PeopleTileByGlobalState.swift */,
+				90BD32F62574EDAB00C3FD76 /* GlobalState.swift */,
 			);
 			path = Personnes;
 			sourceTree = "<group>";
@@ -177,6 +187,14 @@
 			path = "Gestion des Donnees";
 			sourceTree = "<group>";
 		};
+		9078B9792570DB6D00B03174 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9078B97F2570E31B00B03174 /* TextEngine.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		90896B09256429BC00246627 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +204,8 @@
 				90A88AAD2566C7C6002AA39C /* Anomalie.swift */,
 				906001672569732D00E25B68 /* Metadata.swift */,
 				9060016A25697A0300E25B68 /* Datafile.swift */,
+				906E3D4B256FDDC500400FE3 /* AnomalieContainer.swift */,
+				905C9B282572411300642785 /* PeopleContainer.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -200,10 +220,11 @@
 				9055FABD256A54C30020FE70 /* TextMetadata.swift */,
 				9055FAC7256A62300020FE70 /* ActivityIndicator.swift */,
 				9055FAD1256AC7CC0020FE70 /* DateWidget.swift */,
-				90365BAE256CF8FA009D8C52 /* SearchBar.swift */,
+				90365BAE256CF8FA009D8C52 /* FilterBar.swift */,
 				90365BB8256D1B81009D8C52 /* LineWidget.swift */,
 				90C02C2D256E328C003A32F6 /* AnomalieStateView.swift */,
-				90C02C30256E3563003A32F6 /* StateTileView.swift */,
+				907D43352570F3E1008E319F /* NobodyWidget.swift */,
+				90BD32FA257529BD00C3FD76 /* NoEvent.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -211,6 +232,7 @@
 		90BCFC97256418A600AC88A9 = {
 			isa = PBXGroup;
 			children = (
+				90BD32FD2575488E00C3FD76 /* Settings.bundle */,
 				90BCFCA2256418A600AC88A9 /* Ananas */,
 				90BCFCA1256418A600AC88A9 /* Products */,
 			);
@@ -227,6 +249,7 @@
 		90BCFCA2256418A600AC88A9 /* Ananas */ = {
 			isa = PBXGroup;
 			children = (
+				9078B9792570DB6D00B03174 /* Utils */,
 				9055FACB256A72DC0020FE70 /* Ananas.entitlements */,
 				90896B09256429BC00246627 /* Data */,
 				90BCFCCD25641CB700AC88A9 /* Views */,
@@ -341,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90BCFCAB256418A700AC88A9 /* Preview Assets.xcassets in Resources */,
+				90BD32FE2575488E00C3FD76 /* Settings.bundle in Resources */,
 				90BCFCA8256418A700AC88A9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,10 +386,12 @@
 				90A88ABA2567BDA7002AA39C /* CapsuleText.swift in Sources */,
 				906001582569611300E25B68 /* DonneesView.swift in Sources */,
 				90BCFCBC25641AFD00AC88A9 /* AnanasTabView.swift in Sources */,
+				905C9B292572411300642785 /* PeopleContainer.swift in Sources */,
 				9060015B2569622F00E25B68 /* DatafileHRAListView.swift in Sources */,
 				9055FAC8256A62300020FE70 /* ActivityIndicator.swift in Sources */,
-				90BCFCC225641C6900AC88A9 /* PeopleView.swift in Sources */,
+				906E3D3E256FA87D00400FE3 /* PeopleTileByGlobalState.swift in Sources */,
 				90C02C2E256E328C003A32F6 /* AnomalieStateView.swift in Sources */,
+				9078B9802570E31B00B03174 /* TextEngine.swift in Sources */,
 				90365BB9256D1B81009D8C52 /* LineWidget.swift in Sources */,
 				9055FAC1256A5E320020FE70 /* FileChooser.swift in Sources */,
 				90E528D32567E9E1003FC626 /* FormLabelView.swift in Sources */,
@@ -375,19 +401,19 @@
 				9055FAD2256AC7CC0020FE70 /* DateWidget.swift in Sources */,
 				90A88AB42566CDAE002AA39C /* AnomalieDetailsView.swift in Sources */,
 				90E528D62567F8D4003FC626 /* AnomalieUpdateFormView.swift in Sources */,
-				90365BC9256D38AC009D8C52 /* FilteredPeopleView.swift in Sources */,
 				90365BAC256C3DD2009D8C52 /* PeopleAnomalieStateView.swift in Sources */,
 				90A88AB72566CFE5002AA39C /* AnomalieTileView.swift in Sources */,
-				90C02C31256E3563003A32F6 /* StateTileView.swift in Sources */,
 				9060016B25697A0300E25B68 /* Datafile.swift in Sources */,
 				9055FABE256A54C30020FE70 /* TextMetadata.swift in Sources */,
 				90A88AAA2566AC57002AA39C /* PeopleTileView.swift in Sources */,
 				90896B0F25642A6600246627 /* People.swift in Sources */,
 				90896B0B256429DC00246627 /* DataControler.swift in Sources */,
-				90365BAF256CF8FA009D8C52 /* SearchBar.swift in Sources */,
+				90365BAF256CF8FA009D8C52 /* FilterBar.swift in Sources */,
 				90E0D983256AFE72009BAF42 /* AnomalieDetailsViewCompact.swift in Sources */,
 				90A88AA72566AB91002AA39C /* PeopleListView.swift in Sources */,
 				90BCFCBF25641B1000AC88A9 /* AnanasSidebarView.swift in Sources */,
+				906E3D4C256FDDC500400FE3 /* AnomalieContainer.swift in Sources */,
+				90BD32F72574EDAB00C3FD76 /* GlobalState.swift in Sources */,
 				906001682569732D00E25B68 /* Metadata.swift in Sources */,
 				90E0D97F256AFA6A009BAF42 /* AnomalieTileViewCompact.swift in Sources */,
 				90365BC5256D37A1009D8C52 /* FilteredPeopleViewCompact.swift in Sources */,
@@ -395,9 +421,11 @@
 				9060016025696B4300E25B68 /* MetadataView.swift in Sources */,
 				90BA3FFF2567C4BB000CA50E /* SliderEtat.swift in Sources */,
 				90BCFCC825641C8F00AC88A9 /* HRAAbsencesView.swift in Sources */,
+				907D43362570F3E1008E319F /* NobodyWidget.swift in Sources */,
 				90E0D986256B018E009BAF42 /* AnomalieUpdateFormViewCompact.swift in Sources */,
 				90BCFCA4256418A600AC88A9 /* AnanasApp.swift in Sources */,
 				90D24FB925669E3B000B9EAE /* User.swift in Sources */,
+				90BD32FB257529BD00C3FD76 /* NoEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +566,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.tsodev.Ananas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -561,6 +590,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.tsodev.Ananas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -25,7 +25,8 @@ import SwiftDate
 //  "matricule": 901533
 //}
 
-class Anomalie: ObservableObject, Identifiable, Codable {
+class Anomalie: ObservableObject, Identifiable, Codable, Comparable, Hashable {
+        
 enum Sources {
     case LN
     case HRA
@@ -35,15 +36,15 @@ enum Sources {
 @Published var people_id = 0
 @Published var anomalie_from = ""
 @Published var etat = 0
-@Published var hracode = ""
-@Published var lncode = ""
-@Published var libelle = ""
-@Published var debut = Date()
+var hracode = ""
+var lncode = ""
+var libelle = ""
+var debut = Date()
 @Published var commentaire = ""
-@Published var source = 0
-@Published var fullname = ""
-@Published var tgi = ""
-@Published var matricule = 0
+var source = 0
+var fullname = ""
+var tgi = ""
+var matricule = 0
 
 enum CodingKeys: String, CodingKey  {
     case anomalie_id
@@ -61,6 +62,37 @@ enum CodingKeys: String, CodingKey  {
     case matricule
 }
 
+    static func < (lhs: Anomalie, rhs: Anomalie) -> Bool {
+        if lhs.debut.year != rhs.debut.year {
+            return lhs.debut.year < rhs.debut.year
+        } else if lhs.debut.month != rhs.debut.month {
+            return lhs.debut.month < rhs.debut.month
+        } else {
+            return lhs.debut.day < rhs.debut.day
+        }
+    }
+    
+    static func == (lhs: Anomalie, rhs: Anomalie) -> Bool {
+        return lhs.debut.year == rhs.debut.year && lhs.debut.month == rhs.debut.month
+            && lhs.debut.day == rhs.debut.day
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(anomalie_id)
+        hasher.combine(people_id)
+        hasher.combine(anomalie_from)
+        hasher.combine(etat)
+        hasher.combine(hracode)
+        hasher.combine(lncode)
+        hasher.combine(libelle)
+        hasher.combine(commentaire)
+        hasher.combine(debut)
+        hasher.combine(source)
+        hasher.combine(fullname)
+        hasher.combine(tgi)
+        hasher.combine(matricule)
+    }
+    
 func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: CodingKeys.self)
     try container.encode(anomalie_id, forKey: CodingKeys.anomalie_id)
@@ -131,7 +163,7 @@ var sampleAnomalie1: Anomalie {
     anomalie.hracode = "CL3"        //  "hracode": "CL3",
     anomalie.lncode = ".RTTs"       //  "lncode": ".RTTs",
     anomalie.libelle = "LN: .RTTs ne correspond pas avec HRA: CL3"  //  "libelle": "LN: .RTTs ne correspond pas avec HRA: CL3",
-    anomalie.debut = "2020-09-02T00:00:00.000Z".toDate()!.date        //  "debut": "2020-09-02T00:00:00.000Z",
+    anomalie.debut = "2020-08-15T00:00:00.000Z".toDate()!.date        //  "debut": "2020-09-02T00:00:00.000Z",
     anomalie.commentaire = ""       //  "commentaire": "",
     anomalie.source = 1             //  "source": 1,
     anomalie.fullname = "GAUTIER Antoine"   //  "fullname": "GAUTIER Antoine",
@@ -173,7 +205,7 @@ var sampleAnomalie3: Anomalie {
     anomalie.hracode = "CL3"        //  "hracode": "CL3",
     anomalie.lncode = ".RTTs"       //  "lncode": ".RTTs",
     anomalie.libelle = "LN: .RTTs ne correspond pas avec HRA: CL3"  //  "libelle": "LN: .RTTs ne correspond pas avec HRA: CL3",
-    anomalie.debut = "2020-09-02T00:00:00.000Z".toDate()!.date        //  "debut": "2020-09-02T00:00:00.000Z",
+    anomalie.debut = "2020-09-01T00:00:00.000Z".toDate()!.date        //  "debut": "2020-09-02T00:00:00.000Z",
     anomalie.commentaire = ""       //  "commentaire": "",
     anomalie.source = 1             //  "source": 1,
     anomalie.fullname = "GAUTIER Antoine"   //  "fullname": "GAUTIER Antoine",

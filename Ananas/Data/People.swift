@@ -8,24 +8,24 @@
 import Foundation
 import SwiftDate
 
-class People: ObservableObject, Identifiable, Codable {
+class People:  Identifiable, Codable, Comparable, Hashable {
     
     enum Sources {
         case LN
         case HRA
     }
     
-    @Published var people_id = 0
-    @Published var source = 0
-    @Published var matricule = 0
-    @Published var tgi = ""
-    @Published var fullname = ""
-    @Published var firstname = ""
-    @Published var lastname = ""
-    @Published var posact = ""
-    @Published var entree = Date()
+    var people_id = 0
+    var source = 0
+    var matricule = 0
+    var tgi = ""
+    var fullname = ""
+    var firstname = ""
+    var lastname = ""
+    var posact = ""
+    var entree = Date()
 //    @Published var sortie = Date()
-    @Published var createddate = Date()
+    var createddate = Date()
     
     enum CodingKeys: String, CodingKey  {
         case people_id
@@ -40,6 +40,29 @@ class People: ObservableObject, Identifiable, Codable {
 //        case sortie
         case createddate
     }
+    
+    static func < (lhs: People, rhs: People) -> Bool {
+            return lhs.fullname < rhs.fullname
+        }
+
+    
+    static func == (lhs: People, rhs: People) -> Bool {
+        return lhs.fullname == rhs.fullname
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(people_id)
+        hasher.combine(source)
+        hasher.combine(matricule)
+        hasher.combine(tgi)
+        hasher.combine(fullname)
+        hasher.combine(firstname)
+        hasher.combine(lastname)
+        hasher.combine(posact)
+        hasher.combine(entree)
+        hasher.combine(createddate)
+    }
+
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
@@ -66,7 +89,6 @@ class People: ObservableObject, Identifiable, Codable {
         tgi = try values.decode(String.self, forKey: .tgi)
         if (source == 1) {
             fullname = try values.decode(String.self, forKey: .fullname)
-            fullname = try values.decode(String.self, forKey: .fullname)
             firstname = try values.decode(String.self, forKey: .firstname)
             lastname = try values.decode(String.self, forKey: .lastname)
             posact = try values.decode(String.self, forKey: .posact)
@@ -89,7 +111,6 @@ class People: ObservableObject, Identifiable, Codable {
     
     init() {
     }
-
 
 }
 var demoPeople: People {
@@ -136,3 +157,4 @@ var samplePeople2: People {
     
     return people
 }
+
